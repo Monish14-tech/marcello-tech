@@ -1,0 +1,196 @@
+/* ============================================
+   COURSES PAGE STYLES
+   ============================================ */
+
+.page-hero {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 130px 2rem 70px;
+  text-align: center;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.page-hero-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0.75rem 0;
+  letter-spacing: -0.5px;
+}
+
+.page-hero-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* ---- COURSE FULL CARDS ---- */
+.courses-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 60px;
+}
+
+.course-full-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  min-height: 440px;
+}
+
+.cfc-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.cfc-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.course-full-card:hover .cfc-image img {
+  transform: scale(1.03);
+}
+
+.cfc-image-reverse {
+  order: 1;
+}
+.cfc-image-reverse + .cfc-content {
+  order: 0;
+}
+
+.cfc-badge-wrap {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.cfc-content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--bg-card);
+}
+
+.cfc-content h2 {
+  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.cfc-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Topics Grid */
+.cfc-topics h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-light);
+  margin-bottom: 0.625rem;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.375rem;
+}
+
+.topics-grid span {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.725rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.topics-grid span:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+/* Meta Info */
+.cfc-meta {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 0.875rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cfc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+.cfc-meta-item p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.cfc-meta-item strong {
+  color: var(--text-primary);
+}
+
+/* Course Page CTA */
+.course-page-cta {
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .course-full-card {
+    grid-template-columns: 1fr;
+  }
+  .cfc-image { min-height: 260px; order: 0 !important; }
+  .cfc-content { order: 1 !important; padding: 1.75rem; }
+  .cfc-image-reverse { order: 0 !important; }
+  .topics-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .courses-detail-section { gap: 2rem; }
+  .cfc-content { padding: 1.25rem; }
+  .topics-grid { grid-template-columns: 1fr 1fr; }
+}

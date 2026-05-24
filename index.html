@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcello Tech — Start Your Tech Journey</title>
+  <meta name="description" content="Marcello Tech offers premium one-month online internship programs in AI/ML, Data Science, Full Stack Development, and Cyber Security. Start your tech journey today!" />
+  <meta name="keywords" content="Marcello Tech, internship, AI, Machine Learning, Data Science, Full Stack, Cyber Security, online course" />
+  <meta property="og:title" content="Marcello Tech — Learn Today, Lead Tomorrow" />
+  <meta property="og:description" content="Premium tech internship programs. One month, online mode. Limited seats available!" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="courses.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay" id="pageTransition"></div>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+
+  
+
+  
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="navigateTo('home')">
+      
+      <span class="nav-logo-text">Marcello Tech</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a onclick="navigateTo('home')" id="nav-home" class="active">Home</a></li>
+      <li><a onclick="navigateTo('courses')" id="nav-courses">Courses</a></li>
+      <li><a onclick="navigateTo('about')" id="nav-about">About</a></li>
+      <li><a onclick="navigateTo('contact')" id="nav-contact">Contact</a></li>
+      <li><a onclick="navigateTo('contact')" class="nav-cta">Register Now →</a></li>
+    </ul>
+
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      
+      
+      
+    </div>
+  </nav>
+
+  <!-- ============ PAGE WRAPPER ============ -->
+  <div class="page-wrapper">
+
+    <!-- ========== HOME PAGE ========== -->
+    <div class="page active" id="page-home">
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+        
+
+        <div class="hero-bg-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+
+        <div class="hero-grid">
+          <!-- Left Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>Admissions Open — Limited Seats!</span>
+            </div>
+
+            <h1 class="hero-title">
+              Start Your<br/>
+              <span class="hero-title-gradient">Tech Journey</span><br/>
+              <span class="hero-title-with">with Marcello Tech!</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Master cutting-edge technologies with our industry-aligned, one-month intensive online internship programs. From AI to Cyber Security — your dream tech career starts here.
+            </p>
+
+            <div class="hero-features">
+              <div class="hero-feature">
+                
+                <div>
+                  <strong>1 Month Program</strong>
+                  <p>Intensive & Focused</p>
+                </div>
+              </div>
+              <div class="hero-feature">
+                
+                <div>
+                  <strong>Online Mode</strong>
+                  <p>Learn From Anywhere</p>
+                </div>
+              </div>
+              <div class="hero-feature">
+                
+                <div>
+                  <strong>Certificate</strong>
+                  <p>Industry Recognized</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="navigateTo('contact')">
+                 Register Now
+              </button>
+              <button class="btn btn-secondary" onclick="navigateTo('courses')">
+                Explore Courses →
+              </button>
+            </div>
+
+            <div class="hero-contact-strip">
+              <a href="tel:9442344796" class="hero-contact-item">
+                
+                <span>9442344796</span>
+              </a>
+              <div class="hero-contact-divider"></div>
+              <a href="tel:7200045955" class="hero-contact-item">
+                
+                <span>7200045955</span>
+              </a>
+              <div class="hero-contact-divider"></div>
+              <a href="mailto:softwaremarcello@marcello.co.in" class="hero-contact-item">
+                
+                <span>softwaremarcello@marcello.co.in</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="hero-image-wrapper">
+            <div class="hero-image-glow"></div>
+            <img src="images/hero_banner.png" alt="Tech Student at Marcello Tech" class="hero-img animate-float" />
+            <div class="hero-floating-card card-1">
+              
+              <div>
+                <strong>500+</strong>
+                <p>Students Enrolled</p>
+              </div>
+            </div>
+            <div class="hero-floating-card card-2">
+              
+              <div>
+                <strong>4.9/5</strong>
+                <p>Student Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+          <span>Scroll to explore</span>
+        </div>
+      </section>
+
+      <!-- STATS SECTION -->
+      <section class="stats-section">
+        <div class="stats-inner">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-target="500">0</div>
+            <div class="stat-plus">+</div>
+            <p>Students Enrolled</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item reveal">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-plus">+</div>
+            <p>Expert Courses</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item reveal">
+            <div class="stat-number" data-target="95">0</div>
+            <div class="stat-plus">%</div>
+            <p>Placement Rate</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item reveal">
+            <div class="stat-number" data-target="30">0</div>
+            <div class="stat-plus"></div>
+            <p>Days to Mastery</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- FEATURED COURSES SECTION -->
+      <section class="section home-courses">
+        <div class="section-header reveal">
+          <div class="section-label"> Our Programs</div>
+          <h2 class="section-title">
+            Choose Your <span class="gradient-text">Tech Pathway</span>
+          </h2>
+          <p class="section-subtitle">
+            Industry-curated programs designed to take you from beginner to job-ready in just one month.
+          </p>
+        </div>
+
+        <div class="home-courses-grid">
+          <!-- AI/ML Card -->
+          <div class="home-course-card glass-card reveal" onclick="navigateTo('courses')">
+            <div class="course-card-img">
+              <img src="images/ai_ml.png" alt="AI & Machine Learning" />
+              <div class="course-card-overlay"></div>
+            </div>
+            <div class="course-card-body">
+              <div class="course-card-top">
+                <span class="badge badge-purple"> AI / ML</span>
+                <span class="badge badge-gold"> May 25</span>
+              </div>
+              <h3>Artificial Intelligence &amp; Machine Learning</h3>
+              <p>Dive into neural networks, deep learning, NLP, and computer vision with real-world projects.</p>
+              <div class="course-card-footer">
+                <span class="course-duration"> 1 Month</span>
+                <span class="course-mode"> Online</span>
+                <span class="course-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Science Card -->
+          <div class="home-course-card glass-card reveal" onclick="navigateTo('courses')">
+            <div class="course-card-img">
+              <img src="images/data_science.png" alt="Data Science" />
+              <div class="course-card-overlay"></div>
+            </div>
+            <div class="course-card-body">
+              <div class="course-card-top">
+                <span class="badge badge-cyan"> Data Science</span>
+                <span class="badge badge-gold"> May 18</span>
+              </div>
+              <h3>Data Science &amp; Data Analytics</h3>
+              <p>Master Python, SQL, Power BI, and machine learning to unlock data-driven insights.</p>
+              <div class="course-card-footer">
+                <span class="course-duration"> 1 Month</span>
+                <span class="course-mode"> Online</span>
+                <span class="course-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Stack Card -->
+          <div class="home-course-card glass-card reveal" onclick="navigateTo('courses')">
+            <div class="course-card-img">
+              <img src="images/fullstack.png" alt="Full Stack Development" />
+              <div class="course-card-overlay"></div>
+            </div>
+            <div class="course-card-body">
+              <div class="course-card-top">
+                <span class="badge badge-green"> Full Stack</span>
+                <span class="badge badge-gold"> May 25</span>
+              </div>
+              <h3>Full Stack Development</h3>
+              <p>Build production-grade web apps with React, Node.js, MongoDB and modern DevOps tools.</p>
+              <div class="course-card-footer">
+                <span class="course-duration"> 1 Month</span>
+                <span class="course-mode"> Online</span>
+                <span class="course-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cyber Security Card -->
+          <div class="home-course-card glass-card reveal" onclick="navigateTo('courses')">
+            <div class="course-card-img">
+              <img src="images/cybersecurity.png" alt="Cyber Security" />
+              <div class="course-card-overlay"></div>
+            </div>
+            <div class="course-card-body">
+              <div class="course-card-top">
+                <span class="badge badge-red"> Cyber Security</span>
+                <span class="badge badge-gold"> June 01</span>
+              </div>
+              <h3>Cyber Security</h3>
+              <p>Learn ethical hacking, network security, penetration testing and digital forensics.</p>
+              <div class="course-card-footer">
+                <span class="course-duration"> 1 Month</span>
+                <span class="course-mode"> Online</span>
+                <span class="course-arrow">→</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="courses-cta reveal">
+          <button class="btn btn-primary" onclick="navigateTo('courses')">View All Courses →</button>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- WHY MARCELLO SECTION -->
+      <section class="section why-section">
+        <div class="why-grid">
+          <div class="why-left reveal-left">
+            <div class="section-label"> Why Choose Us</div>
+            <h2 class="section-title">
+              The <span class="gradient-text">Marcello Tech</span><br/>Advantage
+            </h2>
+            <p class="section-subtitle">
+              We don't just teach technology — we craft tech professionals. Our intensive programs are built by industry veterans for real-world impact.
+            </p>
+            <div class="why-list">
+              <div class="why-item">
+                
+                <div>
+                  <strong>Industry-Aligned Curriculum</strong>
+                  <p>Built with inputs from top tech companies</p>
+                </div>
+              </div>
+              <div class="why-item">
+                
+                <div>
+                  <strong>Expert Mentors</strong>
+                  <p>Learn from working professionals with 5+ years experience</p>
+                </div>
+              </div>
+              <div class="why-item">
+                
+                <div>
+                  <strong>Hands-On Projects</strong>
+                  <p>Real-world projects to build your portfolio</p>
+                </div>
+              </div>
+              <div class="why-item">
+                
+                <div>
+                  <strong>Recognized Certificate</strong>
+                  <p>Industry-recognized certification upon completion</p>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('about')">Learn More About Us →</button>
+          </div>
+
+          <div class="why-right reveal-right">
+            <div class="why-image-box">
+              <img src="images/about_team.png" alt="Marcello Tech Team" />
+              <div class="why-img-badge">
+                
+                <div>
+                  <strong>Top Rated</strong>
+                  <p>Tech Institute 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section class="section testimonials-section">
+        <div class="section-header reveal" style="text-align:center; margin: 0 auto 3rem;">
+          <div class="section-label"> Student Stories</div>
+          <h2 class="section-title">What Our <span class="gradient-text">Students Say</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Real feedback from real learners who transformed their careers with Marcello Tech.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card glass-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"The AI/ML program was exactly what I needed. The mentors are incredibly knowledgeable and the projects helped me land my first job at a startup!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #7c3aed, #2563eb);">R</div>
+              <div>
+                <strong>Rahul Sharma</strong>
+                <p>AI Engineer at TechStart</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Full Stack Development course transformed me from zero to hero in just 30 days. The curriculum is practical and the support is outstanding!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #06b6d4, #10b981);">P</div>
+              <div>
+                <strong>Priya Nair</strong>
+                <p>Frontend Developer at InfoSys</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Data Science program exceeded all expectations. The instructors made complex concepts easy to understand. Best investment I've made in my career!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">A</div>
+              <div>
+                <strong>Arjun Mehta</strong>
+                <p>Data Analyst at Analytics Corp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CTA SECTION -->
+      <section class="cta-section reveal">
+        <div class="cta-inner">
+          
+          
+          <div class="section-label" style="margin-bottom:1.5rem;"> Limited Seats Available</div>
+          <h2>Ready to <span class="gradient-text">Lead Tomorrow?</span></h2>
+          <p>Join hundreds of students already transforming their careers. Seats fill fast — register today!</p>
+          <div class="cta-actions">
+            <button class="btn btn-gold" onclick="navigateTo('contact')"> Register Now — It's Free!</button>
+            <button class="btn btn-secondary" onclick="navigateTo('courses')">Browse Programs</button>
+          </div>
+          
+        </div>
+      </section>
+
+    </div><!-- end page-home -->
+
+
+    <!-- ========== COURSES PAGE ========== -->
+    <div class="page" id="page-courses">
+      <div class="page-hero courses-page-hero">
+        <div class="page-hero-bg">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+        </div>
+        <div class="page-hero-content">
+          <div class="section-label"> Our Programs</div>
+          <h1 class="page-hero-title">Explore Our <span class="gradient-text">Courses</span></h1>
+          <p>Four industry-leading programs designed to launch your tech career in 30 days.</p>
+        </div>
+      </div>
+
+      <section class="section courses-detail-section">
+
+        <!-- AI/ML Full Card -->
+        <div class="course-full-card glass-card reveal">
+          <div class="cfc-image">
+            <img src="images/ai_ml.png" alt="AI & Machine Learning" />
+            <div class="cfc-badge-wrap">
+              <span class="badge badge-purple"> AI / ML</span>
+              <span class="badge badge-gold"> Starts May 25</span>
+            </div>
+          </div>
+          <div class="cfc-content">
+            <h2>Artificial Intelligence &amp;<br/>Machine Learning</h2>
+            <p class="cfc-desc">Master the full AI/ML pipeline — from data preprocessing to deploying intelligent models. Build projects that solve real-world problems using Python, TensorFlow, and Scikit-Learn.</p>
+            <div class="cfc-topics">
+              <h4>What You'll Learn</h4>
+              <div class="topics-grid">
+                <span> Neural Networks</span>
+                <span> Supervised Learning</span>
+                <span> Deep Learning</span>
+                <span> NLP &amp; Text AI</span>
+                <span> Computer Vision</span>
+                <span> Model Deployment</span>
+              </div>
+            </div>
+            <div class="cfc-meta">
+              <div class="cfc-meta-item"><span></span><p>Duration: <strong>1 Month</strong></p></div>
+              <div class="cfc-meta-item"><p>Mode: <strong>Online</strong></p></div>
+              <div class="cfc-meta-item"><p>Certificate: <strong>Yes</strong></p></div>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('contact')">Register for This Course →</button>
+          </div>
+        </div>
+
+        <!-- Data Science Full Card -->
+        <div class="course-full-card glass-card reveal">
+          <div class="cfc-image cfc-image-reverse">
+            <img src="images/data_science.png" alt="Data Science" />
+            <div class="cfc-badge-wrap">
+              <span class="badge badge-cyan"> Data Science</span>
+              <span class="badge badge-gold"> Starts May 18</span>
+            </div>
+          </div>
+          <div class="cfc-content">
+            <h2>Data Science &amp;<br/>Data Analytics</h2>
+            <p class="cfc-desc">Unlock the power of data. Learn to collect, clean, analyze and visualize data using Python, SQL, Pandas, and Power BI. Build dashboards that drive business decisions.</p>
+            <div class="cfc-topics">
+              <h4>What You'll Learn</h4>
+              <div class="topics-grid">
+                <span> Python &amp; Pandas</span>
+                <span> SQL &amp; Databases</span>
+                <span> Data Visualization</span>
+                <span> Statistical Analysis</span>
+                <span> Power BI / Tableau</span>
+                <span> Predictive Models</span>
+              </div>
+            </div>
+            <div class="cfc-meta">
+              <div class="cfc-meta-item"><span></span><p>Duration: <strong>1 Month</strong></p></div>
+              <div class="cfc-meta-item"><p>Mode: <strong>Online</strong></p></div>
+              <div class="cfc-meta-item"><p>Certificate: <strong>Yes</strong></p></div>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('contact')">Register for This Course →</button>
+          </div>
+        </div>
+
+        <!-- Full Stack Full Card -->
+        <div class="course-full-card glass-card reveal">
+          <div class="cfc-image">
+            <img src="images/fullstack.png" alt="Full Stack Development" />
+            <div class="cfc-badge-wrap">
+              <span class="badge badge-green"> Full Stack</span>
+              <span class="badge badge-gold"> Starts May 25</span>
+            </div>
+          </div>
+          <div class="cfc-content">
+            <h2>Full Stack<br/>Development</h2>
+            <p class="cfc-desc">Build complete, production-ready web applications from scratch. Cover everything from HTML/CSS to React frontends, Node.js backends, and MongoDB databases with real deployment.</p>
+            <div class="cfc-topics">
+              <h4>What You'll Learn</h4>
+              <div class="topics-grid">
+                <span> React.js</span>
+                <span> Node.js &amp; Express</span>
+                <span> MongoDB</span>
+                <span> HTML / CSS / JS</span>
+                <span> REST APIs</span>
+                <span> Cloud Deployment</span>
+              </div>
+            </div>
+            <div class="cfc-meta">
+              <div class="cfc-meta-item"><span></span><p>Duration: <strong>1 Month</strong></p></div>
+              <div class="cfc-meta-item"><p>Mode: <strong>Online</strong></p></div>
+              <div class="cfc-meta-item"><p>Certificate: <strong>Yes</strong></p></div>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('contact')">Register for This Course →</button>
+          </div>
+        </div>
+
+        <!-- Cyber Security Full Card -->
+        <div class="course-full-card glass-card reveal">
+          <div class="cfc-image cfc-image-reverse">
+            <img src="images/cybersecurity.png" alt="Cyber Security" />
+            <div class="cfc-badge-wrap">
+              <span class="badge badge-red"> Cyber Security</span>
+              <span class="badge badge-gold"> Starts June 01</span>
+            </div>
+          </div>
+          <div class="cfc-content">
+            <h2>Cyber Security</h2>
+            <p class="cfc-desc">Become a digital guardian. Learn ethical hacking, network security, penetration testing, and incident response. Protect systems and organizations from modern cyber threats.</p>
+            <div class="cfc-topics">
+              <h4>What You'll Learn</h4>
+              <div class="topics-grid">
+                <span> Network Security</span>
+                <span> Ethical Hacking</span>
+                <span> Penetration Testing</span>
+                <span> Cryptography</span>
+                <span> Incident Response</span>
+                <span> Digital Forensics</span>
+              </div>
+            </div>
+            <div class="cfc-meta">
+              <div class="cfc-meta-item"><span></span><p>Duration: <strong>1 Month</strong></p></div>
+              <div class="cfc-meta-item"><p>Mode: <strong>Online</strong></p></div>
+              <div class="cfc-meta-item"><p>Certificate: <strong>Yes</strong></p></div>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('contact')">Register for This Course →</button>
+          </div>
+        </div>
+
+        <!-- Course CTA -->
+        <div class="course-page-cta reveal">
+          <div class="cta-inner">
+            
+            
+            <h2>Not sure which course to pick?</h2>
+            <p>Contact us and we'll help you choose the perfect program for your goals.</p>
+            <button class="btn btn-gold" onclick="navigateTo('contact')">Get Free Guidance →</button>
+          </div>
+        </div>
+
+      </section>
+    </div><!-- end page-courses -->
+
+
+    <!-- ========== ABOUT PAGE ========== -->
+    <div class="page" id="page-about">
+      <div class="page-hero about-page-hero">
+        <div class="page-hero-bg">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+        </div>
+        <div class="page-hero-content">
+          <div class="section-label"> Our Story</div>
+          <h1 class="page-hero-title">About <span class="gradient-text">Marcello Tech</span></h1>
+          <p>Empowering the next generation of tech leaders — one internship at a time.</p>
+        </div>
+      </div>
+
+      <section class="section about-section">
+
+        <!-- Mission -->
+        <div class="about-mission reveal">
+          <div class="about-mission-img">
+            <div class="about-img-ring"></div>
+            <img src="images/about_team.png" alt="Marcello Tech Team" />
+          </div>
+          <div class="about-mission-content">
+            <div class="section-label"> Our Mission</div>
+            <h2 class="section-title">Built for the <span class="gradient-text">Future of Tech</span></h2>
+            <p>Marcello Tech was founded with one powerful belief: that every student deserves access to world-class technology education. We bridge the gap between academic learning and real-world industry demands.</p>
+            <p style="margin-top:1rem; color: var(--text-secondary);">Our programs are crafted by seasoned industry professionals who understand exactly what employers are looking for. In just 30 days, we transform passionate learners into job-ready tech professionals.</p>
+            <div class="mission-quote">
+              <span class="quote-mark">"</span>
+              <p>Learn Today. Lead Tomorrow.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider" style="margin: 3rem 0;"></div>
+
+        <!-- Values -->
+        <div class="section-header reveal" style="text-align: center; margin-bottom: 3rem;">
+          <div class="section-label"> Core Values</div>
+          <h2 class="section-title">What <span class="gradient-text">Drives Us</span></h2>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card glass-card reveal">
+            
+            <h3>Excellence</h3>
+            <p>We settle for nothing less than the highest quality in everything we do — from curriculum design to student support.</p>
+          </div>
+          <div class="value-card glass-card reveal">
+            
+            <h3>Community</h3>
+            <p>We foster a collaborative learning environment where students grow together and support each other's success.</p>
+          </div>
+          <div class="value-card glass-card reveal">
+            
+            <h3>Innovation</h3>
+            <p>Our curriculum stays ahead of the curve, incorporating the latest technologies and industry practices.</p>
+          </div>
+          <div class="value-card glass-card reveal">
+            
+            <h3>Impact</h3>
+            <p>We measure success by the real-world impact our students make after completing our programs.</p>
+          </div>
+        </div>
+
+        <div class="divider" style="margin: 3rem 0;"></div>
+
+        <!-- Timeline -->
+        <div class="section-header reveal" style="text-align:center; margin-bottom:3rem;">
+          <div class="section-label"> Your Journey</div>
+          <h2 class="section-title">The <span class="gradient-text">30-Day</span> Transformation</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-week">Week 1</span>
+              <h4>Foundation & Setup</h4>
+              <p>Get onboarded, set up your development environment, and master core fundamentals with expert guidance.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-week">Week 2</span>
+              <h4>Core Concepts</h4>
+              <p>Deep-dive into the core technologies of your chosen domain with hands-on labs and practice exercises.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-week">Week 3</span>
+              <h4>Project Building</h4>
+              <p>Apply your knowledge by building a complete, real-world project under expert mentorship.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-week">Week 4</span>
+              <h4>Polish & Certify</h4>
+              <p>Finalize your project, present it, receive feedback, and earn your industry-recognized certificate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cta reveal">
+          <button class="btn btn-primary" onclick="navigateTo('contact')">Start Your Journey Today →</button>
+          <button class="btn btn-secondary" onclick="navigateTo('courses')">Explore Courses</button>
+        </div>
+      </section>
+    </div><!-- end page-about -->
+
+
+    <!-- ========== CONTACT PAGE ========== -->
+    <div class="page" id="page-contact">
+      <div class="page-hero contact-page-hero">
+        <div class="page-hero-bg">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+        </div>
+        <div class="page-hero-content">
+          <div class="section-label"> Get In Touch</div>
+          <h1 class="page-hero-title">Register &amp; <span class="gradient-text">Contact Us</span></h1>
+          <p>Take the first step toward your tech career. Reach out — we'd love to hear from you!</p>
+        </div>
+      </div>
+
+      <section class="section contact-section">
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <div class="contact-info reveal-left">
+            <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            <p class="section-subtitle">Have questions? Ready to register? We're here to guide you every step of the way.</p>
+
+            <div class="contact-cards">
+              <div class="contact-card glass-card">
+                
+                <div>
+                  <h4>Call Us</h4>
+                  <a href="tel:9442344796">9442344796</a>
+                  <a href="tel:7200045955">7200045955</a>
+                </div>
+              </div>
+              <div class="contact-card glass-card">
+                
+                <div>
+                  <h4>Email Us</h4>
+                  <a href="mailto:softwaremarcello@marcello.co.in">softwaremarcello@marcello.co.in</a>
+                </div>
+              </div>
+              <div class="contact-card glass-card">
+                
+                <div>
+                  <h4>Online Mode</h4>
+                  <p>100% Online — Learn from anywhere in India</p>
+                </div>
+              </div>
+              <div class="contact-card glass-card">
+                
+                <div>
+                  <h4>Support Hours</h4>
+                  <p>Mon–Sat: 9 AM – 7 PM IST</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="limited-seats-banner">
+              <div class="lsb-pulse"></div>
+              <div>
+                <strong> Limited Seats Available!</strong>
+                <p>Courses filling up fast. Register now to secure your spot.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Registration Form -->
+          <div class="contact-form-wrapper reveal-right">
+            <div class="glass-card contact-form-card">
+              <div class="form-header">
+                <h3> Register Now</h3>
+                <p>Fill in your details and we'll get back to you within 24 hours.</p>
+              </div>
+
+              <form id="registrationForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="firstName">First Name *</label>
+                    <input type="text" id="firstName" class="form-input" placeholder="Rahul" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" class="form-input" placeholder="Sharma" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input type="email" id="email" class="form-input" placeholder="rahul@example.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="+91 98765 43210" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="course">Course Interested In *</label>
+                  <select id="course" class="form-select" required>
+                    <option value="" disabled selected>Select a course...</option>
+                    <option value="aiml"> Artificial Intelligence &amp; Machine Learning (May 25)</option>
+                    <option value="datascience"> Data Science &amp; Data Analytics (May 18)</option>
+                    <option value="fullstack"> Full Stack Development (May 25)</option>
+                    <option value="cybersecurity"> Cyber Security (June 01)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="qualification">Highest Qualification</label>
+                  <select id="qualification" class="form-select">
+                    <option value="" disabled selected>Select qualification...</option>
+                    <option value="10th">10th Grade</option>
+                    <option value="12th">12th Grade</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="ug">Under Graduate</option>
+                    <option value="pg">Post Graduate</option>
+                    <option value="working">Working Professional</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Message (Optional)</label>
+                  <textarea id="message" class="form-textarea" placeholder="Tell us about your goals or any questions you have..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%; justify-content:center; font-size:1.05rem; padding:1rem;">
+                   Submit Registration
+                </button>
+
+                <p class="form-disclaimer">By submitting, you agree to be contacted by Marcello Tech regarding your registration. Your data is safe with us. </p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section reveal">
+          <div class="section-header" style="text-align:center; margin-bottom:2.5rem;">
+            <div class="section-label"> Quick Answers</div>
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item glass-card" onclick="toggleFaq(this)">
+              <div class="faq-q">
+                <span>What is the course fee?</span>
+                <span class="faq-arrow">▼</span>
+              </div>
+              <div class="faq-a">Please contact us directly at 9442344796 or via email for the latest pricing details and any ongoing offers.</div>
+            </div>
+            <div class="faq-item glass-card" onclick="toggleFaq(this)">
+              <div class="faq-q">
+                <span>Do I need prior coding experience?</span>
+                <span class="faq-arrow">▼</span>
+              </div>
+              <div class="faq-a">No prior experience is needed for most programs! Our courses are designed to take beginners to proficiency. Some advanced modules may benefit from basic knowledge.</div>
+            </div>
+            <div class="faq-item glass-card" onclick="toggleFaq(this)">
+              <div class="faq-q">
+                <span>Will I get a certificate?</span>
+                <span class="faq-arrow">▼</span>
+              </div>
+              <div class="faq-a">Yes! Upon successful completion of the program, you will receive an industry-recognized certificate from Marcello Tech that you can showcase to employers.</div>
+            </div>
+            <div class="faq-item glass-card" onclick="toggleFaq(this)">
+              <div class="faq-q">
+                <span>How are the classes conducted?</span>
+                <span class="faq-arrow">▼</span>
+              </div>
+              <div class="faq-a">All classes are conducted online via live video sessions. Recordings are provided so you can revisit lessons anytime. Sessions are scheduled on weekdays and weekends.</div>
+            </div>
+            <div class="faq-item glass-card" onclick="toggleFaq(this)">
+              <div class="faq-q">
+                <span>Is there placement assistance?</span>
+                <span class="faq-arrow">▼</span>
+              </div>
+              <div class="faq-a">Yes! We provide resume building workshops, mock interviews, and help connect you with our hiring partner network to boost your placement prospects.</div>
+            </div>
+            <div class="faq-item glass-card" onclick="toggleFaq(this)">
+              <div class="faq-q">
+                <span>How many seats are available?</span>
+                <span class="faq-arrow">▼</span>
+              </div>
+              <div class="faq-a">Seats are very limited per batch to ensure quality mentorship and individual attention. We recommend registering as early as possible to secure your spot.</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div><!-- end page-contact -->
+
+  </div><!-- end page-wrapper -->
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon"></span>
+    <div class="toast-content">
+      <div class="toast-title">Registration Submitted!</div>
+      <div class="toast-msg">We'll contact you within 24 hours.</div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" onclick="navigateTo('home')" style="margin-bottom:1rem;">
+            
+            <span class="nav-logo-text">Marcello Tech</span>
+          </div>
+          <p>Empowering future tech leaders through premium, industry-aligned internship programs. Learn today, lead tomorrow.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a onclick="navigateTo('home')">→ Home</a></li>
+            <li><a onclick="navigateTo('courses')">→ Courses</a></li>
+            <li><a onclick="navigateTo('about')">→ About Us</a></li>
+            <li><a onclick="navigateTo('contact')">→ Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Programs</div>
+          <ul class="footer-links">
+            <li><a onclick="navigateTo('courses')">→ AI &amp; Machine Learning</a></li>
+            <li><a onclick="navigateTo('courses')">→ Data Science</a></li>
+            <li><a onclick="navigateTo('courses')">→ Full Stack Dev</a></li>
+            <li><a onclick="navigateTo('courses')">→ Cyber Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><a href="tel:9442344796">→ 9442344796</a></li>
+            <li><a href="tel:7200045955">→ 7200045955</a></li>
+            <li><a href="mailto:softwaremarcello@marcello.co.in">→ Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Marcello Tech. All rights reserved. | Learn Today, Lead Tomorrow.</p>
+        <p style="color: var(--purple-light);"> Built with passion for future tech leaders</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="particles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
